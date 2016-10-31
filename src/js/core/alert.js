@@ -41,13 +41,13 @@
 
         close: function() {
 
-            var element       = this.trigger('close.uk.alert'),
+            var elements = this.trigger('close.uk.alert'),
                 removeElement = function () {
                     this.trigger('closed.uk.alert').remove();
                 }.bind(this);
 
             if (this.options.fade) {
-                element.css('overflow', 'hidden').css("max-height", element.height()).animate({
+                elements.css('overflow', 'hidden').css("max-height", elements.height()).animate({
                     height         : 0,
                     opacity        : 0,
                     paddingTop    : 0,
